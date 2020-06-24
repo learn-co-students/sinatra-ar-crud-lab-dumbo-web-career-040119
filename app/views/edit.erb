@@ -1,0 +1,14 @@
+<form method="POST" action='/articles/<%= @article.id %>'>
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  <h1>Edit Your Article:</h1>
+  <label for='title'>Title</label>
+  <input id="title" type="text" name="article[title]" value="<%= @article.title %>" /><br>
+
+  <label for='content'>Content</label>
+  <input id="content" type="text" name="article[content]" value="<%= @article.content %>" /><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+<!-- On this page we want to edit the information in an article we have already created, so add line 2 to your existing new.erb file.
+We will have to change the name="" to article[title] or article[content] b/c those values must be passed in from a HASH, which is created when we first fill this form out. -->
