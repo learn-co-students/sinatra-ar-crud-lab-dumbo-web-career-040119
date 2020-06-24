@@ -1,0 +1,11 @@
+<h1>Form</h1>
+
+<form action="/articles <%= @article.id %>" method="post">
+  <h2>Article</h2>
+    <label for="title"> Article Title</label>
+    <input id="title" type="text" name = "article[title]"/> <br>
+    <label for="content"> Article Content</label>
+    <input type="text" name = "article[content]"/> <br>
+    <input type='submit' value= "Submit">
+    <!--<button type='submit'>Submit</button>-->
+</form>
